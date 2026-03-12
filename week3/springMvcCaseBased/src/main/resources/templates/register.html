@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration - Library Management</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>User Registration</h2>
+
+    <form th:action="@{/register}"
+          th:object="${user}"
+          method="post">
+
+        <!-- Name -->
+        <label>Name</label>
+        <input type="text"
+               placeholder="Enter Name"
+               th:field="*{name}">
+        <p class="error" th:errors="*{name}"></p>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email"
+               placeholder="Enter Email"
+               th:field="*{email}">
+        <p class="error" th:errors="*{email}"></p>
+
+        <!-- Password -->
+        <label>Password</label>
+        <input type="password"
+               placeholder="Enter Password"
+               th:field="*{password}">
+        <p class="error" th:errors="*{password}"></p>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <br>
+
+    <p style="text-align:center;">
+        Already have an account?
+        <a th:href="@{/login}">Login Here</a>
+    </p>
+
+</div>
+
+</body>
+</html>

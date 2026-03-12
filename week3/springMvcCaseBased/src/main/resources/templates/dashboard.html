@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Library Management</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <h1>📚 Library Management Dashboard</h1>
+    <p class="subtitle">Manage your books easily</p>
+
+    <div class="card-wrapper">
+
+        <!-- Add Book -->
+        <div class="card">
+            <h3>Add New Book</h3>
+            <p>Add books to the library collection.</p>
+            <a class="btn addBook" th:href="@{/books/add}">
+                ➕ Add Book
+            </a>
+        </div>
+
+        <!-- View Books -->
+        <div class="card">
+            <h3>View Books</h3>
+            <p>See all available books.</p>
+            <a class="btn dashboard" th:href="@{/books/view}">
+                📖 View Books
+            </a>
+        </div>
+
+        <!-- Logout -->
+        <div class="card">
+            <h3>Logout</h3>
+            <p>Exit from dashboard safely.</p>
+            <a class="btn delete" th:href="@{/login}">
+                🚪 Logout
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
